@@ -1,0 +1,11 @@
+# Jest
+coverage/
+*.snap
+__snapshots__/
+
+# Babel
+/lib
+/dist
+
+# Dependencies (always ignore these)
+node_modules/
