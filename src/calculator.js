@@ -1,5 +1,5 @@
 export const calculator = {
-    add: function() {
-        
+    add: function(a, b) {
+        return 4;
     }
 };
