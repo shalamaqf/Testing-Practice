@@ -9,3 +9,6 @@ __snapshots__/
 
 # Dependencies (always ignore these)
 node_modules/
+
+# Ignore all JSON files
+*.json
