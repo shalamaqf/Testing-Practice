@@ -1,1 +1,5 @@
-export const calculator = {};
+export const calculator = {
+    add: function() {
+        
+    }
+};
