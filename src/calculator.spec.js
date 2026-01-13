@@ -75,3 +75,7 @@ test('make -32 / -4 return 8', () => {
 test('calculator object contains multiply function', () => {
     expect(typeof calculator.multiply).toBe('function');
 })
+
+test('make 5 * 3 return 15', () => {
+    expect(calculator.multiply(5, 3)).toBe(15);
+})
