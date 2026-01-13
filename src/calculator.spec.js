@@ -25,3 +25,9 @@ test('make 1.23 + 2 return 3.23', () => {
 test('make -5 + -2 return -7', () => {
     expect(calculator.add(-5, -2)).toBeCloseTo(-7);
 })
+
+
+// Tests for subtract function
+test('calculator object contains subtract function', () => {
+    expect(typeof calculator.subtract).toBe('function');
+})
