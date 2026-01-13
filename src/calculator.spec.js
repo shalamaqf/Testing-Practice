@@ -57,3 +57,15 @@ test('calculator object contains divide function', () => {
 test('make 12 / 4 return 3', () => {
     expect(calculator.divide(12, 4)).toBe(3);
 })
+
+test('make 12 / 4 return 3', () => {
+    expect(calculator.divide(100, 25)).toBe(4);
+})
+
+test('make 27.2 / 3.2 return 8.5', () => {
+    expect(calculator.divide(27.2, 3.2)).toBeCloseTo(8.5);
+})
+
+test('make -32 / -4 return 8', () => {
+    expect(calculator.divide(-32, -4)).toBeCloseTo(8);
+})
