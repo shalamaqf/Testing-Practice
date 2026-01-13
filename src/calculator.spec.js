@@ -69,3 +69,9 @@ test('make 27.2 / 3.2 return 8.5', () => {
 test('make -32 / -4 return 8', () => {
     expect(calculator.divide(-32, -4)).toBeCloseTo(8);
 })
+
+
+// Multiply function tests
+test('calculator object contains multiply function', () => {
+    expect(typeof calculator.multiply).toBe('function');
+})
