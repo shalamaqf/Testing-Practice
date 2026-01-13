@@ -11,7 +11,7 @@ export const calculator = {
         return a / b;
     },
 
-    multiply: function() {
-        return 15;
+    multiply: function(a, b) {
+        return a * b;
     }
 };

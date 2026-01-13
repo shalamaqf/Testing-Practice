@@ -79,3 +79,15 @@ test('calculator object contains multiply function', () => {
 test('make 5 * 3 return 15', () => {
     expect(calculator.multiply(5, 3)).toBe(15);
 })
+
+test('make 22 * 31 return 682', () => {
+    expect(calculator.multiply(22, 31)).toBe(682);
+})
+
+test('make 1.2 * 9.4 return 682', () => {
+    expect(calculator.multiply(1.2, 9.4)).toBeCloseTo(11.28);
+})
+
+test('make -4.2 * -0.5 return 682', () => {
+    expect(calculator.multiply(-4.2, -0.5)).toBeCloseTo(2.1);
+})
