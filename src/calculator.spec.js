@@ -35,3 +35,15 @@ test('calculator object contains subtract function', () => {
 test('make 5 - 3 return 2', () => {
     expect(calculator.subtract(5, 3)).toBe(2);
 })
+
+test('make 100 - 35 return 65', () => {
+    expect(calculator.subtract(100, 35)).toBe(65);
+})
+
+test('make 7.3 - 3.1 return 4.2', () => {
+    expect(calculator.subtract(7.3, 3.1)).toBeCloseTo(4.2);
+})
+
+test('make 3 - 24 return -21', () => {
+    expect(calculator.subtract(3, 24)).toBe(-21);
+})
