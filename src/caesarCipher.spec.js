@@ -8,4 +8,8 @@ describe('caesarCipher function', () => {
     test("make 'xyz' with shift 3 return 'abc", () => {
         expect(caesarCipher('xyz', 3)).toBe('abc');
     })
+
+    test("make 'jga' with shift 5 return 'hey'", () => {
+        expect(caesarCipher('hey', 5)).toBe('mjd');
+    })
 })
