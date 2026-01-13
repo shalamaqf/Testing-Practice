@@ -53,3 +53,7 @@ test('make 3 - 24 return -21', () => {
 test('calculator object contains divide function', () => {
     expect(typeof calculator.divide).toBe('function');
 })
+
+test('make 12 / 4 return 3', () => {
+    expect(calculator.divide(12, 4)).toBe(3);
+})

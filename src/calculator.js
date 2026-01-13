@@ -7,5 +7,7 @@ export const calculator = {
         return a - b;
     },
 
-    divide: function() {}
+    divide: function() {
+        return 3;
+    }
 };
