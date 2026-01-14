@@ -24,15 +24,12 @@ export function caesarCipher(string, shift) {
         cipherText[newIndex] = plainText[i].letter;
     }
 
-    console.log(cipherText);
-
     const arrString = string.split('');
     let newString = '';
 
-    // Loop to decode the cipher text to plain text
+    // Loop to encode plain text to cipher
     arrString.forEach(letter => {
         const objectLetter = plainText.find(object => object.letter === letter);
-        console.log(objectLetter);
         const cipherChar = cipherText[objectLetter.index];
         newString += cipherChar;
     });
