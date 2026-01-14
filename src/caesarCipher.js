@@ -14,3 +14,21 @@ function generatePlainText() {
 
     return plainText;
 }
+
+function generateCipherText(plainText, shift) {
+    const cipherText = new Array(26);
+    const length = plainText.length;
+
+    for (let i = 0; i < length; i++) {
+        const oldIndex = plainText[i].index;
+        let newIndex = oldIndex - shift;
+
+        if (newIndex < 0) {
+            newIndex = (oldIndex - shift) + length;
+        }
+
+        cipherText[newIndex] = plainText[i].letter;
+    }
+
+    return cipherText;
+}
