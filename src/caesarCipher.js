@@ -1,5 +1,8 @@
 export function caesarCipher(string, shift) {
-    
+    const plainTextArr = generatePlainText();
+    const cipherTextArr = generateCipherText(plainTextArr, shift);
+    const cipherString = encodeText(string, plainTextArr, cipherTextArr)
+    return cipherString;
 }
 
 function generatePlainText() {
