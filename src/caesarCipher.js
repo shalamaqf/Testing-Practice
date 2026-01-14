@@ -32,3 +32,32 @@ function generateCipherText(plainText, shift) {
 
     return cipherText;
 }
+
+function encodeText(string, plainText, cipherText) {
+    const arrString = string.split('');
+    let newString = '';
+
+    arrString.forEach(letter => {
+        let objectLetter;
+        let cipherChar = ''
+        
+        if (letter === ',' || letter === '.' || letter === '?' || letter === '!' ||
+            letter === ' ' || letter === 1 - 9) {
+                newString += letter;
+                return;
+        }
+
+        objectLetter = plainText.find(object => object.letter === letter.toLowerCase());
+
+        if (letter === letter.toUpperCase()) {
+            cipherChar = cipherText[objectLetter.index];
+            newString += cipherChar.toUpperCase();
+            return;
+        }
+
+        cipherChar = cipherText[objectLetter.index];
+        newString += cipherChar;
+    });
+
+    return newString;
+}
