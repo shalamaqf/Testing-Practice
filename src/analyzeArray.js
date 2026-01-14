@@ -1,7 +1,7 @@
 export function analyzeArray(arrayOfNumbers) {
     const object = {
         average: findAverage(arrayOfNumbers),
-        min: undefined,
+        min: findMin(arrayOfNumbers),
         max: undefined,
         length: undefined
     }
@@ -21,3 +21,16 @@ function findAverage(array) {
 
     return average = sum / length;
 }
+
+function findMin(array) {
+    let min = array[0];
+
+    array.forEach(num => {
+        if (num < min) {
+            min = num;
+        }
+        min = min;
+    });
+
+    return min;
+}  
