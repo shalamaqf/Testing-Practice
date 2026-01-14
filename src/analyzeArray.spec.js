@@ -14,3 +14,14 @@ test('make analyzeArray returns an object with properties', () => {
                     length: 6 
                   })
 })
+
+test('make analyzeArray returns an object with properties', () => {
+    expect(analyzeArray([3, 5, 7, 8, 9]))
+    .toBe(
+        Object == { 
+                    average: 6.4,
+                    min: 3,              
+                    max: 9,
+                    length: 5 
+                  })
+})
