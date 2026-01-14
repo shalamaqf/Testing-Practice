@@ -1,4 +1,8 @@
 export function caesarCipher(string, shift) {
+    
+}
+
+function generatePlainText() {
     const plainText = [
         {letter: 'a', index: 0}, {letter:'b', index: 1}, {letter: 'c', index: 2}, {letter: 'd', index: 3}, {letter: 'e', index: 4}, 
         {letter: 'f', index: 5}, {letter: 'g', index: 6}, {letter: 'h', index: 7}, {letter: 'i', index: 8}, {letter: 'j', index: 9}, 
@@ -8,47 +12,5 @@ export function caesarCipher(string, shift) {
         {letter: 'z', index: 25} 
     ]
 
-    const cipherText = new Array(26);
-
-    const length = plainText.length;
-
-    // Loop to create element for cipherText array
-    for (let i = 0; i < length; i++) {
-        const oldIndex = plainText[i].index;
-        let newIndex = oldIndex - shift;
-
-        if (newIndex < 0) {
-            newIndex = (oldIndex - shift) + length;
-        }
-
-        cipherText[newIndex] = plainText[i].letter;
-    }
-
-    const arrString = string.split('');
-    let newString = '';
-
-    // Loop to encode plain text to cipher
-    arrString.forEach(letter => {
-        let objectLetter;
-        let cipherChar = ''
-        
-        if (letter === ',' || letter === '.' || letter === '?' || letter === '!' ||
-            letter === ' ' || letter === 1 - 9) {
-                newString += letter;
-                return;
-        }
-
-        objectLetter = plainText.find(object => object.letter === letter.toLowerCase());
-
-        if (letter === letter.toUpperCase()) {
-            cipherChar = cipherText[objectLetter.index];
-            newString += cipherChar.toUpperCase();
-            return;
-        }
-
-        cipherChar = cipherText[objectLetter.index];
-        newString += cipherChar;
-    });
-
-    return newString;
+    return plainText;
 }
