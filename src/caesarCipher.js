@@ -29,8 +29,24 @@ export function caesarCipher(string, shift) {
 
     // Loop to encode plain text to cipher
     arrString.forEach(letter => {
-        const objectLetter = plainText.find(object => object.letter === letter);
-        const cipherChar = cipherText[objectLetter.index];
+        let objectLetter;
+        let cipherChar = ''
+        
+        if (letter === ',' || letter === '.' || letter === '?' || letter === '!' ||
+            letter === ' ' || letter === 1 - 9) {
+                newString += letter;
+                return;
+        }
+
+        objectLetter = plainText.find(object => object.letter === letter.toLowerCase());
+
+        if (letter === letter.toUpperCase()) {
+            cipherChar = cipherText[objectLetter.index];
+            newString += cipherChar.toUpperCase();
+            return;
+        }
+
+        cipherChar = cipherText[objectLetter.index];
         newString += cipherChar;
     });
 
