@@ -2,7 +2,7 @@ export function analyzeArray(arrayOfNumbers) {
     const object = {
         average: findAverage(arrayOfNumbers),
         min: findMin(arrayOfNumbers),
-        max: undefined,
+        max: findMax(arrayOfNumbers),
         length: undefined
     }
 
@@ -33,4 +33,17 @@ function findMin(array) {
     });
 
     return min;
-}  
+}
+
+function findMax(array) {
+    let max = array[0];
+
+    array.forEach(num => {
+        if (num > max) {
+            max = num;
+        }
+        max = max;
+    });
+
+    return max;
+}
