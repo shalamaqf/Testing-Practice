@@ -3,7 +3,7 @@ export function analyzeArray(arrayOfNumbers) {
         average: findAverage(arrayOfNumbers),
         min: findMin(arrayOfNumbers),
         max: findMax(arrayOfNumbers),
-        length: undefined
+        length: findLength(arrayOfNumbers)
     }
 
     return object;
@@ -46,4 +46,8 @@ function findMax(array) {
     });
 
     return max;
+}
+
+function findLength(array) {
+    return array.length;
 }
